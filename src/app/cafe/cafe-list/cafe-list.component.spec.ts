@@ -28,7 +28,9 @@ describe('CafeListComponent', () => {
 
 
     component.cafeList =
-    [{ id: faker.datatype.number({min:1, max: 10}), nombre: faker.random.word(), altura: faker.datatype.number(), region: faker.random.word(),imagen:faker.image.avatar(), sabor:faker.random.word(), tipo:faker.random.word() }];
+    [{ id: faker.datatype.number({min:1, max: 10}), nombre: faker.random.word(), altura: faker.datatype.number(), region: faker.random.word(),imagen:faker.image.avatar(), sabor:faker.random.word(), tipo:faker.random.word() },
+      { id: faker.datatype.number({min:1, max: 10}), nombre: faker.random.word(), altura: faker.datatype.number(), region: faker.random.word(),imagen:faker.image.avatar(), sabor:faker.random.word(), tipo:faker.random.word() },
+      { id: faker.datatype.number({min:1, max: 10}), nombre: faker.random.word(), altura: faker.datatype.number(), region: faker.random.word(),imagen:faker.image.avatar(), sabor:faker.random.word(), tipo:faker.random.word() }];
 
 
 
