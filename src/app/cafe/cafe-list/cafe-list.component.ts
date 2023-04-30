@@ -9,6 +9,8 @@ import { CafeService } from '../cafe.service';
 })
 export class CafeListComponent {
   cafeList: Array<Cafe> = [];
+  bendOrigin: number = 0;
+  bendBlend: number = 0;
 
   constructor(private cafeService:  CafeService) {}
 
@@ -20,7 +22,8 @@ export class CafeListComponent {
     this.cafeService.getCafeList().subscribe({
       next: (cafeList: Cafe[]) => {
         this.cafeList = cafeList
-        console.log(this.cafeList);
+        this.bendBlend = this.cafeList.filter(cafe => cafe.tipo === 'Blend').length;
+        this.bendOrigin = this.cafeList.filter(cafe => cafe.tipo === "Café de Origen").length
       }
     })
   }
